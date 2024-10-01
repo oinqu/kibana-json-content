@@ -1,0 +1,10 @@
+.json-field {
+	color: #343741;
+	overflow: auto;
+	text-wrap: wrap;
+}
+.json-field .string { color: #bd271e; }
+.json-field .number { color: #bd271e; }
+.json-field .boolean { color: #c4407c; }
+.json-field .null { color: #e06c75; }
+.json-field .key { color: #0071c2; }

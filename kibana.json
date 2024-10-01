@@ -1,0 +1,17 @@
+{
+  "id": "jsonContent",
+  "version": "1.0.0",
+  "kibanaVersion": "kibana",
+  "owner": {
+    "name": "Adhiraj Singh",
+    "githubTeam": ""
+  },
+  "description": "Pretty print JSON strings in Discover/Logs",
+  "server": true,
+  "ui": true,
+  "requiredPlugins": [
+    "fieldFormats",
+    "dataViewFieldEditor"
+  ],
+  "optionalPlugins": []
+}
