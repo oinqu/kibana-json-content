@@ -4,16 +4,30 @@ A Kibana plugin to pretty print JSON strings in the Kibana Discover/Logs tab. Th
 
 Built for Kibana 8.15.0.
 
-I built this plugin because neither did I want to index the JSON content nor did I want to copy the JSON content to a JSON linter to pretty print it. After hours of searching, I couldn't find any way to pretty print JSONs in the Discover/Logs that did this, so I built one myself.
+I built this plugin because neither did I want to index the JSON content nor did I want to copy the JSON content to a JSON linter to pretty print it. After hours of searching, I couldn't find any way to pretty print JSONs in the Discover/Logs that did this, so I built one myself. If I missed something obvious, feel free to reach out.
 
-## Installation & Usage
+## Installation
 
 The plugin archive is pushed to the `build` folder & committed to the repository (Too lazy to set up a CI/CD pipeline for this).
 
 1. Install in Kibana via:
    ```bash
-   bin/kibana-plugin install TODO
+   bin/kibana-plugin install https://github.com/adiwajshing/kibana-json-content/raw/refs/heads/master/build/jsonContent-8.15.0.zip
    ```
+2. If you're running on Kubernetes, you can use [this guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-custom-images.html).
+
+## Usage
+
+1. Open your Discover/Logs tab & select the field you'd like to print as JSON. This must be some string field. See this [guide](https://www.elastic.co/guide/en/kibana/8.15/managing-data-views.html#managing-fields)
+2. Enable the "Set format", and select JSON:
+   ![Set format](/images/set-format.png)
+3. Click save & close the field editor.
+4. Now, you can see the JSON content pretty printed in the console!
+
+Before:
+   ![Raw JSON](/images/raw-json.png)
+After:
+   ![Pretty printed JSON](/images/pretty-printed-json.png)
 
 ## Development
 
